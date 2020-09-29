@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} Financial News, Economics, Global News {% endblock title %}
+<!-- {% comment %} {% block financenewsactive %} active {% endblock financenewsactive %} {% endcomment %} -->
+
+
+{% block body %}
+
+
+    <div class="container my-4 col-md-8">
+        <h2 class="news-post-title"> {{fnewspost.title}} </h2>
+        <p class="news-post-meta mb-1 text-muted">Posted at : {{fnewspost.timeStamp}} | <strong
+                class="d-inline-block mb-1 text-primary"> Source: {{fnewspost.author}} </strong> | 
+                 ({{fnewspost.views}} views)
+                <div class="fb-like" data-href="http://127.0.0.1:8000/news/{{fnewspost}}" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+        <p class="my-2"> {{fnewspost.content|safe}} </p>
+        <hr>
+        <div class="fb-comments mx-auto" data-href="http://127.0.0.1:8000/news/{{fnewspost}}" data-numposts="5" data-width=""></div>
+    </div>
+
+
+
+{% endblock body %}
