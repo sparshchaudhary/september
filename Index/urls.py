@@ -11,5 +11,6 @@ urlpatterns = [
     path('som', views.som, name='som'),
     path('hrhr', views.hrhr, name='hrhr'),
     path('<str:slug>', views.tnews, name='tnews'),
+    path('test/<str:testslug>', views.testingnewslug, name='testingnewslug'),
 ]
 

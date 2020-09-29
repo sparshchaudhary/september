@@ -80,4 +80,7 @@ def tnews(request, slug):
     context = {'trendpost':trendpost}
     return render(request, 'Index/tnews.html', context)
 
+def testingnewslug(request, testslug):
+    return render(request, 'Index/testingslug.html')
+
 
